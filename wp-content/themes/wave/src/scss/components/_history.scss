@@ -1,0 +1,91 @@
+.history {
+  padding-top: 104px;
+  // padding-bottom: 830px;
+  position: relative;
+  z-index: 1;
+  min-height: 1588px;
+  overflow: hidden;
+
+  &-wave {
+    position: absolute;
+    top: 313px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 1920px;
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &-fishes {
+    position: absolute;
+    top: -114px;
+    right: 119px;
+    width: 676px;
+  }
+
+  &-pufferfish {
+    position: absolute;
+    top: -239px;
+    right: 31%;
+    width: 167px;
+  }
+
+  &-content {
+    padding: 0 80px
+  }
+
+  &-heading {
+    margin-bottom: 110px;
+    padding-left: 22px;
+    position: relative;
+    display: inline-flex;
+  }
+
+  &-penguin {
+    width: 127px;
+    position: absolute;
+    top: -2px;
+    right: -164px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px 0;
+    max-width: 497px;
+    width: 100%;
+    margin-left: 23px;
+  }
+
+  &-desc {
+    font-size: 16px;
+    color: color(blue-100);
+    letter-spacing: 0.04em;
+    line-height: 1.58;
+    padding-left: 7px;
+  }
+
+  &-button {}
+
+  &-video {
+    height: 700px;
+    max-width: 1312px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #DBDBDB;
+    display: block;
+    margin-top: 159px;
+  }
+}

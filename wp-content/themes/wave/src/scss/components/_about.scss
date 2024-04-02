@@ -1,0 +1,161 @@
+.about {
+  // background-color: color(blue-20);
+  background-color: #F1F1F1;
+  position: relative;
+  z-index: 1;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1948px;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &-sun {
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+    width: 709px;
+    height: 709px;
+    rotate: -162deg;
+    transform-origin: center left;
+  }
+
+  &-penguin {
+    width: 222px;
+    position: absolute;
+    top: 12.2%;
+    right: 13.3%;
+  }
+
+  &-waves {
+    position: absolute;
+    top: 324px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center top 0;
+    background-repeat: no-repeat;
+    background-image: url('#{$image-path}/waves/about-wave.svg');
+    background-size: 100% auto;
+  }
+
+  &-content {
+    padding-top: 243px;
+    padding-bottom: 79px;
+    display: flex;
+    flex-direction: column;
+    gap: 226px 0;
+    position: relative;
+  }
+
+  &-heading {
+    color: color(white);
+    font-family: $font-lemon;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 59px 0;
+
+    @include viewport($breakpoint-mobile) {
+      padding: 0 20px;
+    }
+  }
+
+  &-desc {
+    white-space: pre-line;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    line-height: 2.5;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      white-space: normal;
+    }
+  }
+
+  &-flying-fish {
+    width: 264px;
+    position: absolute;
+    top: 13%;
+    left: 22%;
+  }
+
+  &-octopus {
+    width: 161px;
+    position: absolute;
+    top: 36.6%;
+    left: 14.8%;
+    rotate: -13deg;
+  }
+
+  &-dolphin {
+    width: 415px;
+    position: absolute;
+    right: -49px;
+    top: 38.5%;
+  }
+
+  &-fishes {
+    width: 419px;
+    position: absolute;
+    left: -13px;
+    bottom: 34.4%;
+  }
+
+  &-puffers {
+    width: 149px;
+    position: absolute;
+    bottom: 19.6%;
+    right: 12.7%;
+  }
+
+  &-turtle {
+    width: 365px;
+    position: absolute;
+    bottom: 11px;
+    right: 118px
+  }
+
+  &-sardines {
+    position: absolute;
+    opacity: 0.3;
+
+    &-one {
+      width: 319px;
+      top: 25.4%;
+      right: -121px;
+      scale: -1 1;
+    }
+
+    &-two {
+      width: 319px;
+      top: 32%;
+      right: 177px;
+      scale: -1 1;
+    }
+
+    &-three {
+      width: 304px;
+      bottom: 14.5%;
+      left: -134px;
+    }
+
+    &-four {
+      width: 304px;
+      bottom: 8.1%;
+      left: 150px;
+    }
+  }
+}

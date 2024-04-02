@@ -1,0 +1,144 @@
+.contact {
+  position: relative;
+  z-index: 1;
+  margin-top: -112px;
+
+  &-wave {
+    position: absolute;
+    width: 1920px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    background-image: url('#{$image-path}/waves/contact-wave-1.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &-fish {
+    position: absolute;
+    top: -70px;
+    right: 199px;
+    width: 427px;
+    rotate: 7deg;
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &-container {
+    max-width: 1555px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px
+  }
+
+  &-content {
+    display: flex;
+    padding: 182px 0 348px;
+    gap: 0 110px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      gap: 0 30px
+    }
+
+    @include viewport($breakpoint-mobile) {
+      flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      gap: 30px;
+      padding: 100px 0;
+    }
+  }
+
+  &-form {
+    max-width: 1029px;
+    width: 100%;
+    // flex-shrink: 0;
+  }
+
+  &-aside {
+    max-width: 376px;
+    width: 100%;
+    color: color(blue-50);
+
+    @include viewport($breakpoint-laptop-sm) {
+      max-width: 230px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      max-width: none;
+    }
+  }
+
+  &-logo {
+    border-bottom: 1px solid #207898;
+    padding-left: 14px;
+    padding-bottom: 32px;
+
+    &-image {
+      display: block;
+      width: 231px;
+
+      @include viewport($breakpoint-laptop-sm) {
+        width: 184px;
+      }
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &-tel {
+    font-size: 26px;
+    font-weight: 500;
+    display: block;
+    letter-spacing: 0.11em;
+    margin-left: 27px;
+    margin-top: 37px;
+
+    @include viewport($breakpoint-desktop) {
+      font-size: 22px;
+    }
+  }
+
+  &-sns {
+    padding-left: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px 0;
+    margin-top: 69px;
+
+    &-label {
+      font-size: 16px;
+      letter-spacing: 0.18em;
+      color: #434548;
+
+      @include viewport($breakpoint-desktop) {
+        font-size: 12px;
+      }
+    }
+
+    &-instagram {
+      width: 62px;
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+.mission {
+  // background-color: color(blue-20);
+  position: relative;
+  z-index: 1;
+  margin-top: -227px;
+  padding-bottom: 358px;
+
+  &-wave {
+    width: 1948px;
+    background-image: url('#{$image-path}/waves/mission-wave.svg');
+    background-position: center top 95.5%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &-wrapper {
+    max-width: 1635px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &-content {
+    padding: 392px 0 186px;
+  }
+
+  &-heading {
+    font-size: 30px;
+    font-family: $font-lemon;
+    text-align: center;
+  }
+
+  &-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 106px 0;
+    counter-reset: count;
+    margin-top: 176px;
+
+    @include viewport($breakpoint-mobile) {
+      gap: 50px 0;
+      margin-top: 60px;
+    }
+  }
+
+  &-card {
+    display: block;
+    position: relative;
+
+    &:nth-of-type(odd) {
+      .mission-block {
+        right: 0;
+
+        @include viewport($breakpoint-laptop-sm) {
+          right: auto;
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+      .mission-figure {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-figure {
+    border-radius: 30px;
+    overflow: hidden;
+    // width: 48.92%;
+    max-width: 800px;
+    width: 100%;
+
+    @include viewport($breakpoint-laptop) {
+      max-width: none;
+      width: 56%;
+    }
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-creature {
+    position: absolute;
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    &.mission-penguin {
+      width: 209px;
+      top: -48px;
+      right: 38px;
+
+      @include viewport($breakpoint-laptop) {
+        width: 167px;
+      }
+    }
+
+    &.mission-crocs {
+      width: 224px;
+      top: 70px;
+      right: 118px;
+
+      @include viewport($breakpoint-laptop) {
+        width: 179px;
+        right: 20px;
+        top: 20px;
+      }
+    }
+
+    &.mission-polarbear {
+      width: 302px;
+      scale: -1 1;
+      top: 64px;
+      right: 48px;
+
+      @include viewport($breakpoint-laptop) {
+        width: 241px;
+        right: 20px;
+        top: 20px
+      }
+    }
+  }
+
+  &-block {
+    width: 54.25%;
+    border-radius: 45px;
+    background-color: rgba(color(white), 0.2);
+    box-shadow: 0px 10px 10px #4693B8;
+    height: 494px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 83px 0 0 95px;
+
+    @include viewport($breakpoint-laptop) {
+      padding: 50px 30px;
+      height: auto;
+    }
+
+    @include viewport($breakpoint-laptop-sm) {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 95%;
+      margin: -100px auto 0
+    }
+
+    @include viewport($breakpoint-mobile) {
+      padding: 50px 20px;
+    }
+  }
+
+  &-number {
+    position: relative;
+
+    &::before {
+      position: relative;
+      font-size: 40px;
+      font-family: $font-lemon;
+      content: "0" counter(count);
+      counter-increment: count;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    line-height: 1.55;
+    margin-top: 49px;
+
+    @include viewport($breakpoint-laptop) {
+      margin-top: 30px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 20px;
+      margin-top: 18px;
+    }
+  }
+
+  &-desc {
+    font-size: 16px;
+    white-space: pre-line;
+    line-height: 1.55;
+    letter-spacing: 0.15em;
+    margin-top: 40px;
+
+    @include viewport($breakpoint-laptop) {
+      margin-top: 20px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+      white-space: normal;
+    }
+  }
+}

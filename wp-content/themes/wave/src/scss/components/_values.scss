@@ -1,0 +1,118 @@
+.values {
+  display: flex;
+  justify-content: center;
+  padding-right: 34px;
+
+  @include viewport($breakpoint-laptop) {
+    padding: 0 30px;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  &-block {
+    position: relative;
+    width: 50%;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: auto;
+    }
+  }
+
+  &-graphic {
+    position: relative;
+    width: 400px;
+    margin-left: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 244px 0;
+    padding-top: 59px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: 300px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      gap: 50px 0;
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &-heading {
+    font-family: $font-lemon;
+    font-size: 30px;
+  }
+
+  &-logo {
+    width: 229px;
+    height: 155px;
+    position: relative;
+    z-index: 1;
+    left: -71px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &-sun {
+    position: absolute;
+    top: 211px;
+    right: -42px;
+    width: 619px;
+    height: 619px;
+    z-index: -1;
+
+    @include viewport($breakpoint-mobile) {
+      top: 0;
+      right: auto;
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 70px 0;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: 100%;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 50px;
+      gap: 30px 0;
+    }
+  }
+
+  &-desc {
+    font-size: 20px;
+    color: color(white);
+    font-weight: 500;
+    white-space: pre-line;
+    line-height: 3.5;
+    letter-spacing: 0.15em;
+
+    @include viewport($breakpoint-laptop) {
+      font-size: 16px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
+  }
+}

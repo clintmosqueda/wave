@@ -1,0 +1,102 @@
+.card-review {
+  box-shadow: 0px 4px 4px rgba(70, 147, 184, 0.4);
+  border: 1px solid color(blue-30);
+  border-radius: 11px;
+  position: relative;
+  padding: 49px 35px 31px;
+
+  &-rating {
+    display: flex;
+    gap: 0 4px;
+    position: relative;
+
+    span {
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    &-filled {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      gap: 0 4px;
+    }
+  }
+
+  &-desc {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: color(blue-100);
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    padding-right: 37px;
+    margin-top: 31px;
+  }
+
+  &-link {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      // content: '';
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  &-information {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+    margin-top: 48px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      right: 25px;
+      width: 79px;
+      height: 21px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('#{$image-path}/squiggly-alt.png');
+    }
+  }
+
+  &-avatar {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &-detail {
+    color: color(blue-30);
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+
+  &-name {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+  }
+
+  &-info {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+}

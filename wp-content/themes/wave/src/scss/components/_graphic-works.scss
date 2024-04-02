@@ -1,0 +1,80 @@
+.graphic-works {
+  color: color(white);
+  max-width: 527px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  &-link {
+    font-size: 45px;
+    font-family: $font-league-spartan;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid #C8EFF4;
+    padding-bottom: 9px;
+    gap: 0 19px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 31px;
+    }
+
+    &::before {
+      position: relative;
+      content: '';
+      top: -8px;
+      width: 55px;
+      height: 83px;
+      display: inline-block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('#{$image-path}/graphic-works.png');
+
+      @include viewport($breakpoint-mobile) {
+        width: 44px;
+        height: 66px;
+      }
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    top: 43%;
+    right: 22px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: color(blue-30);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include viewport($breakpoint-mobile) {
+      right: 0;
+    }
+
+    &::after {
+      content: '';
+      width: 18px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('#{$image-path}/arrow-white-thin.png');
+    }
+  }
+
+  &-par {
+    font-size: 16px;
+    letter-spacing: 0.125em;
+    margin-top: 35px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.card-project {
+  display: flex;
+  gap: 0 90px;
+
+  &-content {
+    padding-top: 83px;
+  }
+
+  &-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 13px;
+
+    &::before {
+      content: "0" counter(count);
+      counter-increment: count;
+      position: relative;
+      display: inline-block;
+      font-family: $font-lemon;
+      font-size: 30px;
+      color: color(white);
+    }
+
+    &::after {
+      flex-shrink: 0;
+      display: inline-block;
+      content: '';
+      width: 85px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('#{$image-path}/squiggly.png');
+    }
+  }
+
+  &-title {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    line-height: 1.56;
+    margin-top: 24px;
+  }
+
+  &-desc {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    line-height: 1.56;
+    margin-top: 49px;
+  }
+
+  &-link {
+    font-size: 18px;
+    font-family: $font-lemon;
+    background-color: color(white);
+    box-shadow: 0px 4px 4px rgba(55, 117, 133, 0.47);
+    border-radius: 26.5px;
+    padding: 10px 10px;
+    color: color(blue-60);
+    padding: 15px 77px 14px;
+    margin-top: 46px;
+  }
+
+  &-figure {
+    border-radius: 27px;
+    height: 463px;
+    width: 100%;
+    max-width: 703px;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}

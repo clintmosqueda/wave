@@ -1,0 +1,78 @@
+.vision {
+  background-image: url('#{$image-path}/waves/vision-wave.svg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-color: color(blue-60);
+  position: relative;
+  z-index: 2;
+
+  &-content {
+    text-align: center;
+    padding-top: 302px;
+    padding-bottom: 227px;
+    position: relative;
+
+    @include viewport($breakpoint-mobile) {
+      padding-top: 150px;
+    }
+  }
+
+  &-dolphin {
+    display: block;
+    position: absolute;
+    top: 120px;
+    right: 28.5%;
+    width: 272px;
+
+    @include viewport($breakpoint-laptop) {
+      right: 15%;
+    }
+
+    @include viewport($breakpoint-laptop-sm) {
+      right: 5%;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  &-heading {
+    font-size: 30px;
+    font-family: $font-lemon;
+    color: color(blue-20);
+  }
+
+  &-desc {
+    font-size: 24px;
+    line-height: 1.85;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    white-space: pre-line;
+    color: color(blue-60);
+    margin-top: 77px;
+
+    @include viewport($breakpoint-mobile) {
+      padding: 0 20px;
+      font-size: 14px;
+    }
+  }
+
+  &-video {
+    width: 100%;
+    height: 567px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('#{$image-path}/bg-ocean.jpg');
+    margin-top: 98px;
+  }
+}

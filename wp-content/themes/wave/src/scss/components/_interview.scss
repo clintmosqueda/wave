@@ -1,0 +1,108 @@
+.interview {
+  position: relative;
+
+  &-wave {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  &-wave-1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-trash {
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    width: 292px;
+    height: 382px;
+    z-index: 2;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &-net {
+      width: 178px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-bottle {
+      width: 115px;
+      position: absolute;
+      bottom: 67px;
+      right: 0;
+    }
+
+    &-tin {
+      width: 68px;
+      position: absolute;
+      bottom: 0;
+      left: 93px;
+    }
+  }
+
+  &-bear {
+    position: absolute;
+    top: 18.7%;
+    right: 12.7%;
+    width: 367px;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-wave-2 {
+    position: absolute;
+    top: 333px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  &-content {
+    min-height: 1287px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 232px;
+  }
+
+  &-desc {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 0 5px;
+    margin-top: 89px;
+  }
+
+  &-cards {
+    // display: flex;
+    margin-top: 109px;
+    // gap: 0 32px;
+  }
+
+  &-carousel-actions {
+    margin-top: 10px;
+
+    .carousel-navigation {
+      position: relative;
+      top: 45px
+    }
+  }
+}

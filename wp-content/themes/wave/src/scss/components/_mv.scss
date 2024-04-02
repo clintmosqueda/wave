@@ -1,0 +1,347 @@
+.mv {
+  position: relative;
+  z-index: 1;
+  padding-top: 25px;
+  overflow: hidden;
+
+  &-waves {
+    pointer-events: none;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 1920px;
+    z-index: -1;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &-layer {
+      display: block;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+    &-1 {
+      position: relative;
+    }
+
+    &-3 {
+      bottom: -26px;
+    }
+
+    &-4 {
+      bottom: -32px;
+    }
+
+    &-8,
+    &-9,
+    &-10 {
+      bottom: -31px;
+    }
+
+    &-inner {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &-penguin {
+    position: absolute;
+    top: -128px;
+    right: 90px;
+    width: 259px;
+    z-index: -1;
+  }
+
+  &-flying-fish {
+    width: 465px;
+    height: 169px;
+    position: absolute;
+    top: -118px;
+    left: 39.5%;
+    margin-left: calc(-465px/2)
+  }
+
+  &-squirtle {
+    position: absolute;
+    top: -273px;
+    left: 103px;
+    width: 371.37px;
+    z-index: -1;
+  }
+
+  &-shark {
+    position: absolute;
+    top: 89px;
+    left: 38px;
+    width: 273px;
+  }
+
+  &-stem-rock {
+    width: 390px;
+    position: absolute;
+    top: -235px;
+    left: 0;
+  }
+
+  &-starfish {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 96px;
+  }
+
+  &-coral-creatures {
+    width: 324px;
+    position: absolute;
+    top: -21px;
+    left: 312px;
+    z-index: -1;
+  }
+
+  &-seaweed {
+    position: absolute;
+    bottom: 20px;
+    right: 28px;
+    width: 406px;
+    z-index: 1;
+
+    &-snake {
+      width: 245px;
+      position: absolute;
+      top: -35px;
+      right: 16.5%;
+    }
+
+    &-leaf {
+      width: 211px;
+      top: 13%;
+      left: 16.7%;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  &-bear {
+    width: 417px;
+    position: absolute;
+    top: -32px;
+    left: 31%;
+  }
+
+  &-puffer {
+    width: 151px;
+    position: absolute;
+    top: 9px;
+    right: 38%
+  }
+
+  &-ducks {
+    position: absolute;
+    top: -3%;
+    right: 15.2%;
+    width: 287px;
+  }
+
+  &-nesting {
+    width: 300px;
+    position: absolute;
+    top: -76px;
+    right: 0;
+  }
+
+  &-angel-fish {
+    position: absolute;
+    top: -71px;
+    right: 15.3%;
+    width: 106px;
+
+    &-small {
+      top: 11.5%;
+      right: 15.5%;
+      position: absolute;
+      width: 60px;
+    }
+  }
+
+  &-sponge {
+    width: 243px;
+    bottom: 79px;
+    left: 169px;
+    position: absolute;
+  }
+
+  &-trash {
+
+    &-can {
+      position: absolute;
+      top: 43%;
+      right: 30%;
+      width: 97px;
+    }
+
+    &-bag {
+      position: absolute;
+      top: -25px;
+      right: 31%;
+      width: 167px;
+      z-index: -1;
+    }
+
+    &-tin {
+      position: absolute;
+      top: -42px;
+      right: -7px;
+      width: 83px;
+    }
+  }
+
+  &-dolphin {
+    width: 420px;
+    position: absolute;
+    top: 7%;
+    right: 3%;
+  }
+
+  &-net {
+    width: 230px;
+    position: absolute;
+    top: 19%;
+    right: -16px;
+  }
+
+  &-jellyfishies {
+    position: absolute;
+    top: 28px;
+    right: 2.1%;
+    width: 182px;
+  }
+
+  &-grofish {
+    width: 417px;
+    position: absolute;
+    top: 29%;
+    right: 24%;
+    scale: -1 1;
+  }
+
+  &-turtle {
+    width: 291px;
+    position: absolute;
+    top: 28%;
+    left: 35.4%;
+    z-index: -1;
+  }
+
+  &-bottle {
+    width: 159px;
+    left: 28.8%;
+    top: 40%;
+    position: absolute;
+  }
+
+  &-snapper {
+    position: absolute;
+    top: 24%;
+    left: 28%;
+    width: 97px;
+  }
+
+  &-couple-fish {
+    width: 308px;
+    position: absolute;
+    top: -42px;
+    right: 30.2%;
+  }
+
+  &-sardines {
+    &-1 {
+      position: absolute;
+      top: 97px;
+      right: 50px;
+      width: 311px;
+      scale: -1 1;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    &-2 {
+      position: absolute;
+      top: 90px;
+      right: 18%;
+      width: 311px;
+      scale: -1 1;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    &-3 {
+      position: absolute;
+      top: 191px;
+      left: -115px;
+      width: 311px;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    &-4 {
+      position: absolute;
+      top: 44%;
+      left: 9%;
+      width: 311px;
+      opacity: 0.3;
+      z-index: -1;
+    }
+  }
+
+  &-content {
+    min-height: 1099px;
+    // padding: 265px 0 0 340px;
+    position: relative;
+  }
+
+  &-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px 0;
+    position: absolute;
+    top: 24%;
+    left: 23%;
+  }
+
+  &-par {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: pre-line;
+    letter-spacing: 0.3em;
+    line-height: 2;
+  }
+
+  &-by {
+    display: inline-flex;
+    align-items: flex-end;
+    font-size: 9px;
+    gap: 0 5px;
+    letter-spacing: 0.1em;
+    padding-right: 54px;
+
+    img {
+      position: relative;
+      top: 2px;
+      display: block;
+      object-fit: contain;
+      width: calc(115px/2);
+    }
+  }
+}

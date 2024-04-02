@@ -1,0 +1,137 @@
+.works {
+  background-color: color(white);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url('#{$image-path}/waves/works-wave.svg');
+  background-size: auto;
+  margin-top: -49px;
+
+  &-wrapper {
+    margin: 0 auto;
+    max-width: 1203px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  &-content {
+    min-height: 1480px;
+    padding-bottom: 142px;
+    padding-top: 202px;
+  }
+
+  &-mid {
+    text-align: center;
+    margin-top: 233px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 100px;
+    }
+
+    &-heading {
+      color: color(blue-20);
+      font-family: $font-lemon;
+      font-size: 30px;
+    }
+  }
+
+  &-desc {
+    color: color(blue-60);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    margin-top: 66px;
+
+
+    @include viewport($breakpoint-laptop-sm) {
+      line-height: 150%;
+    }
+
+  }
+
+  &-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 18px;
+    margin-top: 145px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 100px;
+    }
+  }
+
+  &-category {
+    height: 39px;
+    width: 155px;
+    display: inline-flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+
+    &:nth-of-type(1) {
+      background-color: color(white);
+      color: color(blue-30)
+    }
+
+    &:nth-of-type(2) {
+      background-color: color(blue-60);
+    }
+
+    &:nth-of-type(3) {
+      background-color: color(orage);
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 59px 52px;
+    margin-top: 92px;
+
+    @include viewport($breakpoint-mobile) {
+      gap: 50px 35px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    // @include viewport($breakpoint-mobile-l) {
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
+  }
+
+  &-pagination {
+    margin-top: 136px;
+  }
+
+  &-graphic {
+    position: relative;
+    z-index: 1;
+    height: 820px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 94px;
+    margin-bottom: -269px;
+
+    @include viewport($breakpoint-mobile) {
+      height: 600px;
+      margin-bottom: -225px;
+    }
+
+    &-bg {
+      z-index: -1;
+      width: 1920px;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      // background-color: #011216;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-image: url('#{$image-path}/waves/graphic-works-wave.svg');
+    }
+  }
+}

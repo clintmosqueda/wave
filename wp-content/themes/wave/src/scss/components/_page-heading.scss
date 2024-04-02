@@ -1,0 +1,71 @@
+.page-heading {
+  position: relative;
+  z-index: 1;
+  margin-top: -141px;
+
+  &-wave {
+    width: 1948px;
+    background-image: url('#{$image-path}/waves/page-heading-wave.png');
+    background-position: center bottom 38%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    .contact-page & {
+      background-position: center bottom -257px;
+    }
+
+    .archive-news & {
+      background-position: center top 70px;
+    }
+  }
+
+  &-content {
+    min-height: 535px;
+    padding-top: 246px;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 31px 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 54%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 2px;
+      width: 256px;
+      background-color: #C8EFF4;
+    }
+
+    &-en {
+      font-family: $font-lemon;
+      font-size: 30px;
+
+      @include viewport($breakpoint-desktop) {
+        font-size: 26px;
+      }
+    }
+
+    &-jp {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+
+      @include viewport($breakpoint-desktop) {
+        font-size: 16px;
+      }
+    }
+  }
+}

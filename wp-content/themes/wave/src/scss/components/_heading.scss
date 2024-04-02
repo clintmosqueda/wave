@@ -1,0 +1,22 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px 0;
+
+  &-en {
+    font-family: $font-lemon;
+    font-size: 40px;
+  }
+
+  &-jp {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding-left: 8px;
+  }
+
+  &-alt {
+    color: color(blue-30)
+  }
+}

@@ -1,0 +1,30 @@
+.pagination {
+  position: relative;
+  color: color(blue-60);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-nav {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &-prev {}
+
+  &-next {}
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 26px;
+  }
+
+  &-item {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &-item {}
+}

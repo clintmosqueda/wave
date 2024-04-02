@@ -1,0 +1,210 @@
+.connect {
+  background-image: url('#{$image-path}/waves/contact-wave.svg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -591px;
+
+  @include viewport($breakpoint-mobile) {
+    background-position: center left;
+    margin-bottom: -195px;
+  }
+
+  span {
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-shark {
+    width: 300px;
+    position: absolute;
+    top: -167px;
+    right: 7px;
+    scale: -1 1;
+    filter: drop-shadow(0px 3px 1px rgba(#636363, 0.5));
+    transform: translate3d(0, 0, 0);
+
+    @include viewport($breakpoint-laptop) {
+      width: 240px;
+      right: 0;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: 192px;
+      top: -25px;
+    }
+  }
+
+  &-plastic {
+    width: 153px;
+    position: absolute;
+    top: -38px;
+    left: 353px;
+
+
+    @include viewport($breakpoint-laptop) {
+      width: 122px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &-fish {
+    width: 225px;
+    position: absolute;
+    top: -123px;
+    left: 175px;
+
+    @include viewport($breakpoint-laptop) {
+      width: 180px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    min-height: 1148px;
+    padding-top: 234px;
+
+    @include viewport($breakpoint-mobile) {
+      flex-direction: column;
+      gap: 50px 0;
+      min-height: auto;
+      padding: 234px 0 267px;
+    }
+  }
+
+  &-content {
+    width: 50%;
+    display: flex;
+    // align-items: center;
+    padding-left: 110px;
+
+    @include viewport($breakpoint-laptop) {
+      padding: 0 20px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &-contact,
+  &-works {
+    max-width: 487px;
+    width: 100%;
+
+    @include viewport($breakpoint-mobile) {
+      max-width: none;
+    }
+  }
+
+  &-works {
+    padding-left: 42px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
+  }
+
+  &-heading {
+    font-size: 30px;
+    font-family: $font-lemon;
+    margin-bottom: 33px;
+
+    @include viewport($breakpoint-desktop) {
+      font-size: 26px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 22px;
+    }
+  }
+
+  &-link {
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 41px;
+    position: relative;
+    letter-spacing: 0.06em;
+    position: relative;
+
+    @include viewport($breakpoint-desktop) {
+      font-size: 24px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 18px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      height: 2px;
+      width: 100%;
+      background-color: color(white);
+    }
+
+    &-icon {
+      top: -9px;
+      right: 32px;
+      position: absolute;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .connect-contact & {
+        background-color: color(blue-30);
+      }
+
+      .connect-works & {
+        background-color: color(blue-90);
+
+        @include viewport($breakpoint-mobile) {
+          background-color: color(blue-30);
+        }
+      }
+
+      &::before {
+        content: '';
+        flex-shrink: 0;
+        display: block;
+        height: 12px;
+        width: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('#{$image-path}/arrow-white-thin.png');
+      }
+    }
+  }
+
+  &-desc {
+    font-size: 16px;
+    letter-spacing: 0.123em;
+    line-height: 1.85;
+    margin-top: 29px;
+    white-space: pre-line;
+
+    @include viewport($breakpoint-desktop) {
+      font-size: 12px;
+    }
+  }
+}

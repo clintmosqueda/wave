@@ -1,0 +1,75 @@
+.header {
+  z-index: 2;
+  position: relative;
+
+  &.is-top {
+    background-color: #fff;
+  }
+
+  .about-us-page & {
+    background-color: #F1F1F1;
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 99px 0;
+
+    @include viewport($breakpoint-desktop) {
+      padding: 20px 20px 0;
+    }
+
+    @include viewport($breakpoint-laptop-sm) {
+      align-items: flex-start;
+    }
+
+    .is-top & {
+      padding: 34px 189px 22px 232px;
+
+      @include viewport($breakpoint-laptop-sm) {
+        padding: 20px 20px 0
+      }
+    }
+  }
+
+  &-right {
+    position: relative;
+  }
+
+  &-sun {
+    position: absolute;
+    bottom: -143px;
+    right: -195px;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &-logo {
+    position: relative;
+    display: block;
+    width: 134px;
+    padding-top: 4px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: 100px;
+      padding-top: 0;
+    }
+
+    .is-top & {
+      width: 151px;
+
+      @include viewport($breakpoint-laptop-sm) {
+        width: 115px;
+      }
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}

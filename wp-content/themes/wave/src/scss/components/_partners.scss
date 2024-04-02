@@ -1,0 +1,82 @@
+.partners {
+  position: relative;
+  z-index: 1;
+  margin-top: -275px;
+
+  &-waves {
+    position: absolute;
+    width: 1950px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-fish {
+    position: absolute;
+    top: -51%;
+    right: 21%;
+    width: 225px;
+  }
+
+  &-plastic {
+    position: absolute;
+    top: -21%;
+    right: 15.6%;
+    width: 153px;
+  }
+
+  &-content {
+    padding: 226px 80px 0;
+  }
+
+  &-label {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: color(blue-60);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 71px;
+      height: 54px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('#{$image-path}/creatures/penguin-tripad.svg');
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 56px 0;
+    margin-top: 90px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-figure {
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

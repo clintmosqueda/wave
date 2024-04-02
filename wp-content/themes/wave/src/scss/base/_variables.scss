@@ -1,0 +1,37 @@
+//antialiased,subpixel-antialiased,none
+$breakpoint-desktop: 1512px;
+$breakpoint-laptop: 1420px;
+$breakpoint-laptop-sm: 1040px;
+$breakpoint-mobile: 767px;
+$breakpoint-mobile-l: 425px;
+
+$wrapper-size: 1480px + 40px;
+
+$font-noto-sans-jp: "Noto Sans JP", sans-serif;
+$font-lemon: "Lemon", serif;
+$font-inter: "Inter", sans-serif;
+$font-league-spartan: "League Spartan", sans-serif;
+$font-spartan: "Spartan";
+
+$font-path: '../lib/fonts';
+$image-path: '../images';
+
+$color: (
+  white: #fff,
+  black: #000,
+  orage: #F2953F,
+  blue-10: #3BA3D6,
+  blue-20: #0085B0,
+  blue-30: #2B81A0,
+  blue-40: #267D9C,
+  blue-50: #207898,
+  blue-60: #377585,
+  blue-70: #2A6676,
+  blue-80: #005167,
+  blue-90: #104B61,
+  blue-100: #032C37,
+  blue-110: #0A2A3C,
+);
+
+$cubic-bezier: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$orb-color: linear-gradient(90deg, rgba(164, 232, 215, 1) 0%, rgba(99, 181, 199, 1) 100%);

@@ -1,0 +1,91 @@
+.archive {
+  position: relative;
+  z-index: 1;
+
+  &-wave {
+    position: absolute;
+    top: -93px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+    height: 418px;
+    z-index: -1;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-wrapper {
+    max-width: 1372px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &-content {
+    padding-top: 87px;
+    padding-bottom: 193px;
+  }
+
+  &-filters {
+    display: flex;
+    align-items: center;
+    gap: 0 27px;
+
+    @include viewport($breakpoint-laptop) {
+      gap: 0 10px;
+      justify-content: space-between;
+    }
+
+    &-button {
+      border: 2px solid #E8E8E8;
+      border-radius: 50px;
+      height: 39px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: color(blue-30);
+      width: 155px;
+      flex-shrink: 0;
+      transition: all 0.3s ease-in-out;
+      letter-spacing: 0.15em;
+      font-weight: bold;
+      font-size: 14px;
+
+      @include viewport($breakpoint-laptop) {
+        width: calc(50% - 10px);
+      }
+
+      &.is-active,
+      &:hover {
+        background-color: color(blue-60);
+        border-color: color(blue-60);
+        color: color(white)
+      }
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 55px;
+    margin-top: 71px;
+
+    @include viewport($breakpoint-laptop) {
+      gap: 50px 35px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &-pagination {
+    margin-top: 151px;
+  }
+}

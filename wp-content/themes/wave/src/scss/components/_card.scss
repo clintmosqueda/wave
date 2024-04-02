@@ -1,0 +1,177 @@
+.card {
+  color: color(blue-60);
+  position: relative;
+
+  &-figure {
+    overflow: hidden;
+    height: 254px;
+    position: relative;
+
+    @include viewport($breakpoint-mobile) {
+      height: 203px;
+    }
+
+    .card-alt & {
+      height: 347px;
+
+      @include viewport($breakpoint-mobile) {
+        height: 277px;
+      }
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+
+    .card-alt & {
+      flex-direction: column-reverse;
+      margin-top: 10px;
+    }
+  }
+
+  &-link {
+    display: block;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      z-index: 1;
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    line-height: 130%;
+    position: relative;
+
+    @include viewport($breakpoint-laptop) {
+      padding-right: 35px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+    }
+
+    .card-alt & {
+      font-size: 20px;
+      margin-top: 15px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    // transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: color(blue-30);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include viewport($breakpoint-laptop) {
+      width: 32px;
+      height: 32px;
+    }
+
+    .card-alt & {
+      width: 52px;
+      height: 52px;
+
+      @include viewport($breakpoint-laptop) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 17px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('#{$image-path}/arrow-white-thin.png');
+
+      @include viewport($breakpoint-laptop) {
+        width: 15px;
+        height: 9px;
+      }
+    }
+  }
+
+  &-time {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    margin-top: 11px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &-client {
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-top: 6px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: center;
+    margin-top: 25px;
+
+    @include viewport($breakpoint-mobile) {
+      gap: 10px;
+    }
+  }
+
+  &-tag {
+    display: inline-block;
+    border-radius: 50px;
+    color: color(white);
+    background-color: color(blue-50);
+    padding: 6px 26px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+
+}

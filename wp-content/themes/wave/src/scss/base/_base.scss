@@ -1,0 +1,35 @@
+html {
+	-webkit-text-size-adjust: 100%;
+
+	@include viewport($breakpoint-mobile) {
+		overflow-x: hidden;
+	}
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	text-rendering: auto;
+	font-family: $font-noto-sans-jp;
+	font-size: 14px;
+	color: color(white);
+	background-color: color(white);
+
+	@include viewport($breakpoint-mobile) {
+		min-width: initial;
+	}
+}
+
+.wrapper {
+	width: $wrapper-size;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px
+}
+
+.wrap {
+	overflow: hidden;
+}
