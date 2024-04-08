@@ -1,5 +1,9 @@
 .interview {
-  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(0, 86, 111, 1) 70%);
+
+  &-container {
+    position: relative;
+  }
 
   &-wave {
     width: 100%;
@@ -38,6 +42,10 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      @include viewport($breakpoint-laptop-sm) {
+        display: none;
+      }
     }
 
     &-bottle {
@@ -61,6 +69,10 @@
     right: 12.7%;
     width: 367px;
 
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+
     img {
       display: block;
       width: 100%;
@@ -81,6 +93,15 @@
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 232px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      padding-top: 260px;
+    }
   }
 
   &-desc {
@@ -89,12 +110,21 @@
     letter-spacing: 0.2em;
     padding: 0 5px;
     margin-top: 89px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 45px;
+      line-height: 150%;
+    }
   }
 
   &-cards {
     // display: flex;
     margin-top: 109px;
     // gap: 0 32px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 55px;
+    }
   }
 
   &-carousel-actions {

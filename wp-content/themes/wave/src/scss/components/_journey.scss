@@ -3,6 +3,8 @@
   overflow: hidden;
   z-index: 1;
   margin-top: -168px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(74, 169, 206, 1) 50%, rgba(74, 169, 206, 1) 100%);
+
 
   &-bg {
     width: 1920px;
@@ -26,6 +28,31 @@
     bottom: 0;
     left: 0;
     display: block;
+
+    &-2 {
+      top: 0;
+    }
+
+    &-3 {
+      top: 0;
+    }
+
+    &-animals {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+
+      @include viewport($breakpoint-laptop) {
+        width: 1080px;
+      }
+
+      @include viewport(524px) {
+        width: 900px;
+      }
+    }
   }
 
   &-fish {
@@ -71,6 +98,14 @@
     top: 10.6%;
     right: 27%;
     width: 376px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: 263px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      top: 4.6%;
+    }
   }
 
   &-squirtle {
@@ -78,6 +113,16 @@
     top: 20%;
     right: 9.8%;
     width: 378px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(378px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(378px*0.6);
+      top: 25%;
+      right: 20%;
+    }
   }
 
   &-tin {
@@ -86,6 +131,16 @@
     top: 25.2%;
     right: 32.6%;
     rotate: -111deg;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(110px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(110px*0.6);
+      right: 42.6%;
+      top: 31%;
+    }
   }
 
   &-plastic {
@@ -94,6 +149,10 @@
     top: 14%;
     left: 25%;
     rotate: 69deg;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(111px*0.7);
+    }
   }
 
   &-penguin {
@@ -101,6 +160,16 @@
     top: 25.1%;
     left: 165px;
     width: 372px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(372px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(372px*0.55);
+      top: 31.1%;
+      left: 25%
+    }
   }
 
   &-group-fish {
@@ -108,6 +177,16 @@
     position: absolute;
     top: 27.7%;
     left: 34.6%;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(150px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(150px*0.55);
+      left: 48.6%;
+      top: 30.7%;
+    }
   }
 
   &-starfish {
@@ -115,6 +194,15 @@
     top: 35.5%;
     left: 36.2%;
     width: 111px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(111px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(111px*0.55);
+      top: 38.5%;
+    }
   }
 
   &-jellyfish {
@@ -124,6 +212,10 @@
     width: 141px;
     scale: -1 1;
     rotate: 8deg;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(141px*0.7);
+    }
   }
 
   &-bear {
@@ -133,6 +225,16 @@
     width: 386px;
     scale: -1 1;
     rotate: -18deg;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(386px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(386px*0.55);
+      top: 55%;
+      right: 25%;
+    }
   }
 
   &-bottle {
@@ -140,6 +242,10 @@
     top: 37.7%;
     right: 42.4%;
     width: 112px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(112px*0.7);
+    }
   }
 
   &-yellow-fish {
@@ -147,19 +253,43 @@
     top: 23.5%;
     right: 14.5%;
     width: 97px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(97px*0.7);
+    }
   }
 
   &-content {
-    display: flex;
-    flex-direction: column;
-    gap: 407px 0;
-    min-height: 3221px;
     padding-top: 508px;
     padding-left: 66px;
     padding-right: 61px;
+    padding-bottom: 508px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      padding-top: 250px;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 400px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 408px 0;
+    margin-bottom: 190px;
+
+    @include viewport($breakpoint-mobile) {
+      gap: 300px 0;
+    }
   }
 
   &-article {
+    height: 600px;
+
     &:nth-of-type(even) {
       text-align: right;
     }
@@ -171,6 +301,15 @@
     white-space: pre-line;
     letter-spacing: 0.3em;
     line-height: 2.15;
+
+    @include viewport($breakpoint-laptop-sm) {
+      font-size: 20px;
+      letter-spacing: 0.1em;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+    }
   }
 
   &-welcome {

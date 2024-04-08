@@ -5,6 +5,10 @@
   position: relative;
   padding: 49px 35px 31px;
 
+  @include viewport($breakpoint-mobile) {
+    padding: 20px;
+  }
+
   &-rating {
     display: flex;
     gap: 0 4px;
@@ -32,6 +36,11 @@
     letter-spacing: 0.04em;
     padding-right: 37px;
     margin-top: 31px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+      padding-right: 0;
+    }
   }
 
   &-link {
@@ -74,6 +83,11 @@
     border-radius: 50%;
     overflow: hidden;
 
+    @include viewport($breakpoint-mobile) {
+      height: calc(56px*0.8);
+      width: calc(56px*0.8);
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -93,10 +107,18 @@
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.08em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
   }
 
   &-info {
     font-size: 16px;
     letter-spacing: 0.05em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
   }
 }

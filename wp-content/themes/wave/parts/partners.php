@@ -16,7 +16,7 @@ $partners = [
 ] 
 ?>
 
-<section class="partners">
+<section class="partners animate-in fade-in">
   <div class="partners-waves">
     <img src="<?php echo resolve_asset_url('/images/waves/partners-wave-1.svg'); ?>" alt="wave">
     <span class="partners-fish"><img src="<?php echo resolve_asset_url('/images/creatures/fish.png'); ?>" alt="wave"></span>

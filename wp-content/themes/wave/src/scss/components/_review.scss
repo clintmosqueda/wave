@@ -1,5 +1,5 @@
 .review {
-  background-color: color(white);
+  background-color: transparent;
   position: relative;
   z-index: 1;
 
@@ -34,13 +34,25 @@
 
   &-content {
     min-height: 922px;
-    padding: 0 69px
+    padding: 0 69px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      padding: 0 0
+    }
+
+    @include viewport($breakpoint-mobile) {
+      min-height: auto;
+    }
   }
 
   &-heading {
     padding-left: 36px;
     position: relative;
     display: inline-block;
+
+    @include viewport($breakpoint-laptop-sm) {
+      padding-left: 0;
+    }
   }
 
   &-octopus {
@@ -65,7 +77,11 @@
   }
 
   &-slide {
-    width: 604px !important
+    width: 604px !important;
+
+    @include viewport($breakpoint-mobile) {
+      width: 100% !important;
+    }
   }
 
   &-item {

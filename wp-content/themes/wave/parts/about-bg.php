@@ -1,7 +1,10 @@
 <div class="about-bg">
-    <?php import_part('sun', array(
-      'modifier' => 'about-sun'
-    ))?>
+    <div class="about-sun-container rellax" data-rellax-speed="-1.5">
+      <?php import_part('sun', array(
+        'modifier' => 'about-sun',
+        'speed' => '-1'
+      ))?>
+    </div>
     <?php import_part('image', array(
       'modifier' => 'about-penguin',
       'src' => '/images/creatures/penguin.png' 

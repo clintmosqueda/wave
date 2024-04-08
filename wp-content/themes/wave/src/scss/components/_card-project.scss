@@ -2,8 +2,21 @@
   display: flex;
   gap: 0 90px;
 
+  @include viewport($breakpoint-laptop) {
+    gap: 0 20px
+  }
+
+  @include viewport($breakpoint-mobile) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
   &-content {
     padding-top: 83px;
+
+    @include viewport($breakpoint-laptop) {
+      padding-top: 0;
+    }
   }
 
   &-label {
@@ -41,6 +54,10 @@
     letter-spacing: 0.2em;
     line-height: 1.56;
     margin-top: 24px;
+
+    @include viewport($breakpoint-laptop) {
+      font-size: 18px;
+    }
   }
 
   &-desc {
@@ -48,6 +65,10 @@
     letter-spacing: 0.2em;
     line-height: 1.56;
     margin-top: 49px;
+
+    @include viewport($breakpoint-laptop) {
+      font-size: 14px;
+    }
   }
 
   &-link {
@@ -60,6 +81,10 @@
     color: color(blue-60);
     padding: 15px 77px 14px;
     margin-top: 46px;
+
+    @include viewport($breakpoint-laptop) {
+      font-size: 14px;
+    }
   }
 
   &-figure {
@@ -69,6 +94,17 @@
     max-width: 703px;
     flex-shrink: 0;
     overflow: hidden;
+
+    @include viewport($breakpoint-laptop) {
+      max-width: calc(703px*0.7);
+      height: calc(463px*0.8);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      max-width: none;
+      height: calc(463px*0.6);
+      border-radius: 15px;
+    }
 
     img {
       width: 100%;

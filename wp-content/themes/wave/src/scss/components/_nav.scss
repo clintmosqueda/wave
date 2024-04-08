@@ -10,6 +10,10 @@
     gap: 0 40px;
   }
 
+  @include viewport($breakpoint-laptop) {
+    padding: 11px 20px;
+  }
+
   @include viewport($breakpoint-laptop-sm) {
     flex-direction: column;
     align-items: flex-end;

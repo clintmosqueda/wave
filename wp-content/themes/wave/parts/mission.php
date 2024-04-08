@@ -47,10 +47,10 @@ $missions = [
   <div class="mission-wave"></div>
   <div class="mission-wrapper">
     <div class="mission-content">
-      <h3 class="mission-heading">our mission</h3>
+      <h3 class="mission-heading animate-in fade-in">our mission</h3>
       <div class="mission-cards">
         <?php foreach($missions as $mission) {?>
-          <article class="mission-card">
+          <article class="mission-card animate-in fade-in">
             <figure class="mission-figure">
               <img src="<?php echo resolve_asset_url($mission["image"])?>" alt="">
             </figure>

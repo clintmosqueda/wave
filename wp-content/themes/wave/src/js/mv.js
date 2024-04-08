@@ -1,4 +1,3 @@
-import Rellax from "rellax"
 import { moveX, moveY, rotate } from "./animationHelper";
 
 export default function Mv() {
@@ -23,8 +22,5 @@ export default function Mv() {
     moveY('.mv-waves-3-image', 1)
     moveY('.mv-waves-5-image', 1)
     moveY('.mv-waves-7-image', 1)
-
-
-    let rellax = new Rellax('.rellax')
   }
 }

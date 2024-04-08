@@ -1,4 +1,4 @@
-<section class="history">
+<section class="history animate-in fade-in">
   <div class="history-wave">
     <img src="<?php echo resolve_asset_url('/images/waves/history-wave.svg'); ?>" alt="wave">
     <span class="history-fishes">
@@ -24,7 +24,7 @@
         <p class="history-desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダ</p>
         <?php import_part('button', array(
           'modifier' => 'button-alt history-button',
-          'link' => '/',
+          'link' => resolve_url('about-us'),
           'text' => 'view all',
         ))?>
       </div>

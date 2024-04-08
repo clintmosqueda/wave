@@ -6,6 +6,11 @@
   min-height: 1588px;
   overflow: hidden;
 
+  @include viewport($breakpoint-mobile) {
+    min-height: auto;
+    padding-bottom: 100px
+  }
+
   &-wave {
     position: absolute;
     top: 313px;
@@ -14,10 +19,19 @@
     z-index: -1;
     width: 1920px;
 
+    @include viewport($breakpoint-laptop-sm) {
+      // top: 500px;
+    }
+
     img {
       width: 100%;
       display: block;
       object-fit: contain;
+      position: relative;
+
+      // @include viewport($breakpoint-laptop-sm) {
+      //   left: -20%;
+      // }
     }
   }
 
@@ -26,6 +40,14 @@
     top: -114px;
     right: 119px;
     width: 676px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(676px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
   }
 
   &-pufferfish {
@@ -33,10 +55,22 @@
     top: -239px;
     right: 31%;
     width: 167px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(167px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
   }
 
   &-content {
-    padding: 0 80px
+    padding: 0 80px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      padding: 0;
+    }
   }
 
   &-heading {
@@ -44,6 +78,14 @@
     padding-left: 22px;
     position: relative;
     display: inline-flex;
+
+    @include viewport($breakpoint-laptop-sm) {
+      padding-left: 0;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 60px;
+    }
   }
 
   &-penguin {
@@ -51,6 +93,16 @@
     position: absolute;
     top: -2px;
     right: -164px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      width: calc(127px*0.7);
+      right: calc(-164px*0.7);
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: calc(127px*0.5);
+      right: calc(-164px*0.5);
+    }
 
     img {
       width: 100%;
@@ -67,6 +119,14 @@
     max-width: 497px;
     width: 100%;
     margin-left: 23px;
+
+    @include viewport($breakpoint-laptop-sm) {
+      margin-left: 0;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      max-width: none;
+    }
   }
 
   &-desc {
@@ -75,6 +135,11 @@
     letter-spacing: 0.04em;
     line-height: 1.58;
     padding-left: 7px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      font-size: 14px;
+    }
   }
 
   &-button {}
@@ -87,5 +152,10 @@
     background-color: #DBDBDB;
     display: block;
     margin-top: 159px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 50px;
+      height: 320px;
+    }
   }
 }

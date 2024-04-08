@@ -1,7 +1,7 @@
-export default function Parallax() {
+export default function FadeIn() {
   let animteIn = document.querySelectorAll('.animate-in')
 
-  if (animteIn) {
+  if (animteIn.length) {
     let animteInSettings = {
       rootMargin: '0px',
       threshold: [0.2],

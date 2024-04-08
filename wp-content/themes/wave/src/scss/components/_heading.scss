@@ -7,6 +7,10 @@
   &-en {
     font-family: $font-lemon;
     font-size: 40px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 32px;
+    }
   }
 
   &-jp {
@@ -14,6 +18,10 @@
     font-weight: bold;
     letter-spacing: 0.2em;
     padding-left: 8px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
   }
 
   &-alt {

@@ -1,6 +1,8 @@
 .about {
   // background-color: color(blue-20);
-  background-color: #F1F1F1;
+  // background-color: #F1F1F1;
+  background: linear-gradient(180deg, rgba(241, 241, 241, 1) 41%, rgba(0, 86, 111, 0) 87%);
+  ;
   position: relative;
   z-index: 1;
 
@@ -15,14 +17,20 @@
   }
 
   &-sun {
-    position: absolute;
-    left: 50%;
-    top: 130px;
-    transform: translateX(-50%);
-    width: 709px;
-    height: 709px;
+
+    &-container {
+      position: absolute;
+      left: 50%;
+      top: 130px;
+      // transform: translateX(-50%);
+      width: 709px;
+      height: 709px;
+      margin-left: calc(-709px/2)
+    }
+
+    width: 100%;
+    height: 100%;
     rotate: -162deg;
-    transform-origin: center left;
   }
 
   &-penguin {
@@ -157,5 +165,23 @@
       bottom: 8.1%;
       left: 150px;
     }
+  }
+}
+
+.test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+
+  &-parallax {
+    &>use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite
+    }
+
+    // & > use:nth-child(1) {
+
+    // }
   }
 }

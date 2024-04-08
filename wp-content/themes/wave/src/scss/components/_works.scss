@@ -103,6 +103,10 @@
 
   &-pagination {
     margin-top: 136px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-top: 68px;
+    }
   }
 
   &-graphic {

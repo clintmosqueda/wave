@@ -1,7 +1,7 @@
 <section class="member">
   <div class="member-content">
-    <h3 class="member-heading">member</h3>
-    <div class="member-bio">
+    <h3 class="member-heading animate-in fade-in">member</h3>
+    <div class="member-bio animate-in fade-in">
       <span class="member-bottle">
         <img src="<?php echo resolve_asset_url('/images/trash/trash-bottle-2.png');?>" alt="">
       </span>

@@ -11,6 +11,10 @@
   &.is-top {
     margin-top: 0;
     background-color: #002B3E;
+
+    @include viewport($breakpoint-mobile) {
+      background-color: #003649;
+    }
   }
 
   &-content {

@@ -1,9 +1,9 @@
 <?php
 $modifier = empty($modifier) ? '' : $modifier;
-$parallex_speed = empty($parallex_speed) ? '' : $parallex_speed;
+$speed = empty($speed) ? '' : $speed;
 ?>
 <div class="mv-waves-layer mv-waves-7">
-  <div class="mv-waves-inner <?php echo $modifier; ?>" data-rellax-speed="<?php echo $parallex_speed; ?>">
+  <div class="mv-waves-inner <?php echo $modifier; ?>" data-rellax-speed="<?php echo $speed; ?>">
     <img class="mv-waves-7-image" src="<?php echo resolve_asset_url('/images/waves/mv-wave-7.svg'); ?>" alt="wave">
     <?php import_part('image', array(
       'modifier' => 'mv-squirtle',

@@ -28,7 +28,7 @@ $company = empty($company) ? '' : ','.$company;
       <?php } ?>
     </div>
   </div>
-  <h3 class="card-review-desc"><a class="card-interview-link" href="<?php echo $link; ?>"><?php echo $review; ?></a></h3>
+  <h3 class="card-review-desc"><a class="card-review-link" href="<?php echo $link; ?>"><?php echo $review; ?></a></h3>
   <div class="card-review-information">
     <figure class="card-review-avatar">
       <img src="<?php echo $avatar; ?>" alt="">

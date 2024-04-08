@@ -1,4 +1,4 @@
-<section class="projects">
+<section class="projects animate-in fade-in">
   <div class="projects-wave">
     <?php import_part('image', array(
       'modifier' => 'projects-seagull',
@@ -57,6 +57,7 @@
       <div class="projects-button">
         <?php import_part('button', array(
           'modifier' => 'button-alt',
+          'link' => resolve_archive_url(WORKS_POST_TYPE),
           'text' => 'view all'
         ))?>
       </div>

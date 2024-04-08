@@ -3,7 +3,7 @@ import 'swiper/css/bundle';
 export default function Carousel() {
 
   const interviewCarousel = new Swiper('.js-interview-carousel', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     watchSlidesProgress: true,
     pagination: {
@@ -16,10 +16,17 @@ export default function Carousel() {
       nextEl: '.carousel-navigation-next',
       prevEl: '.carousel-navigation-prev',
     },
+    breakpoints: {
+      769: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+    }
   })
 
   const reviewCarousel = new Swiper('.js-review-carousel', {
-    slidesPerView: 2,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     watchSlidesProgress: true,
     pagination: {
@@ -32,6 +39,13 @@ export default function Carousel() {
       nextEl: '.carousel-navigation-next',
       prevEl: '.carousel-navigation-prev',
     },
+    // breakpoints: {
+    //   769: {
+    //     spaceBetween: 40,
+    //     slidesPerView: 2,
+    //     allowTouchMove: false,
+    //   },
+    // }
   })
 
   const projectCarousel = new Swiper('.js-projects-carousel', {

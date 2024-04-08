@@ -1,4 +1,4 @@
-<section class="vision">
+<section class="vision animate-in fade-in">
   <div class="vision-content">
     <span class="vision-dolphin">
       <img src="<?php echo resolve_asset_url('/images/creatures/dolphin-outlined.png')?>" alt="">

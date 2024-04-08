@@ -29,6 +29,10 @@
     .is-top & {
       padding: 34px 189px 22px 232px;
 
+      @include viewport($breakpoint-desktop) {
+        padding: 34px 20px 22px;
+      }
+
       @include viewport($breakpoint-laptop-sm) {
         padding: 20px 20px 0
       }
@@ -45,6 +49,18 @@
     right: -195px;
     z-index: -1;
     pointer-events: none;
+
+    @include viewport($breakpoint-mobile) {
+      right: -100px;
+      bottom: -100px;
+    }
+
+    .sun {
+      @include viewport($breakpoint-mobile) {
+        width: 400px;
+        height: 400px;
+      }
+    }
   }
 
   &-logo {
