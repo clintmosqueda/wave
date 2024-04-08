@@ -1,11 +1,2 @@
 node_modules
 .DS_Store
-wp-*
-!wp-content/
-!wp-content/plugins
-!wp-content/themes
-wp-content/themes/*/assets/css/*
-wp-content/themes/*/assets/js/*
-wp-content/uploads/*
-package-lock.json
-mix-manifest.json
