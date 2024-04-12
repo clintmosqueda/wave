@@ -11,4 +11,4 @@ function contact_form_error_message( $error, $key, $rule ) {
   return $error;
 }
 
-add_filter( 'mwform_error_message_mw-wp-form-54', 'contact_form_error_message', 10, 3 );
+add_filter( 'mwform_error_message_mw-wp-form-60', 'contact_form_error_message', 10, 3 );
