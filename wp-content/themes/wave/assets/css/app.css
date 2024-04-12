@@ -1078,9 +1078,6 @@ body {
   color: #F2953F;
 }
 .form-radio-group {
-  display: flex;
-  align-items: center;
-  gap: 0 57px;
   padding: 33px 0 22px 8px;
 }
 @media all and (max-width: 767px) {
@@ -1088,6 +1085,16 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+}
+.mw_wp_form .form-radio-group .horizontal-item + .horizontal-item {
+  margin-left: 20px;
+}
+.form-radio-group .mwform-radio-field {
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-radio-group .error {
+  margin-top: 20px;
 }
 .form label, .form-label-radio {
   font-size: 16px;
@@ -1157,6 +1164,9 @@ body {
   font-weight: bold;
   letter-spacing: 0.24em;
   padding-left: 37px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
 }
 @media all and (max-width: 425px) {
   .form-button {

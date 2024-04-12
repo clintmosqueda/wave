@@ -92,14 +92,27 @@
   }
 
   &-radio-group {
-    display: flex;
-    align-items: center;
-    gap: 0 57px;
+    // display: flex;
+    // align-items: center;
+    // gap: 0 57px;
     padding: 33px 0 22px 8px;
 
     @include viewport($breakpoint-mobile) {
       flex-direction: column;
       gap: 10px
+    }
+
+    .mw_wp_form & .horizontal-item  + .horizontal-item {
+      margin-left: 20px;
+    }
+
+    .mwform-radio-field {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .error {
+      margin-top: 20px;
     }
   }
 
@@ -185,6 +198,9 @@
     font-weight: bold;
     letter-spacing: 0.24em;
     padding-left: 37px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 
     @include viewport($breakpoint-mobile-l) {
       width: 100%;
