@@ -56,10 +56,12 @@
                 <?php endwhile; endif; ?>
             </div>
           </div>
+
           <?php import_part('carousel-actions', array(
             'modifier' => 'interview',
             'paginationEl' => 'js-interview-pagination',
           ))?>
+
         </div>
       </div>
     </div>

@@ -7,8 +7,10 @@ import Journey from './journey'
 import Partners from './partners'
 import Review from './review'
 import Pr from './pr'
+import Contact from './contact'
 
 const home = document.querySelector('.home')
+const contact = document.querySelector('.contact')
 if (home) {
   Mv()
   Journey()
@@ -16,6 +18,10 @@ if (home) {
   Carousel()
   Review()
   Pr()
+}
+
+if(contact) {
+  Contact()
 }
 
 Animation()

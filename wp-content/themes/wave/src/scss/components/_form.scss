@@ -109,10 +109,15 @@
     .mwform-radio-field {
       display: inline-block;
       vertical-align: middle;
+      cursor: pointer;
     }
 
     .error {
       margin-top: 20px;
+    }
+
+    label {
+      cursor: pointer;
     }
   }
 
@@ -163,6 +168,10 @@
     margin-top: 67px;
     padding-left: 20px;
 
+    .confirm-page & {
+      padding-left: 0;
+    }
+
     @include viewport($breakpoint-mobile) {
       padding-left: 0;
       flex-direction: column;
@@ -181,9 +190,25 @@
       text-decoration: underline;
       display: inline;
     }
+
+    .form-label-radio {
+      cursor: pointer;
+      &.is-checked {
+        span::before {
+          background-color: #3BA3D6;
+        }
+      }
+    }
+
+    .confirm-page & {
+      display: none;
+    }
   }
 
-  &-actions {}
+  &-actions {
+    display: flex;
+    gap: 20px;
+  }
 
   &-button {
     box-shadow: 0px 2px 2px rgba(70, 147, 184, 0.4);
@@ -201,6 +226,17 @@
     border: none;
     background-color: white;
     cursor: pointer;
+
+    &.form-button-confirm {
+      pointer-events: none;
+      opacity: 0.5;
+
+      &.is-checked {
+        pointer-events: auto;
+        opacity: 1;
+  
+      }
+    }
 
     @include viewport($breakpoint-mobile-l) {
       width: 100%;
@@ -230,6 +266,12 @@
         width: 18px;
         display: inline-block;
         flex-shrink: 0;
+      }
+    }
+
+    &-back {
+      .form-button-icon {
+        scale: -1 1;
       }
     }
   }

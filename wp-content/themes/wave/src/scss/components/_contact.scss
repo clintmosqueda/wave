@@ -141,4 +141,26 @@
       }
     }
   }
+
+  &-thank {
+    padding-top: 50px;
+    text-align: center;
+    
+    h2 {
+      font-size: 52px;
+      color: color(blue-50);
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 32px;
+      color: color(blue-50);
+    }
+
+    &-button {
+      margin-top: 42px;
+      color: color(blue-50);
+    }
+  }
 }

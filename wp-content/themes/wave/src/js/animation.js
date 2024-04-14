@@ -6,9 +6,12 @@ import CONST from "./constants"
 
 export default function Animation() {
   const workCards = document.querySelector('.works-cards')
+  const _relax = document.querySelectorAll('.rellax')
 
-  let rellax = new Rellax('.rellax')
-
+  if(_relax.length) {
+    let rellax = new Rellax('.rellax')
+  }
+  
   if (workCards) {
     gsap.timeline({
       scrollTrigger: {

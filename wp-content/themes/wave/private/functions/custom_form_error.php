@@ -15,6 +15,10 @@ function contact_form_error_message( $error, $key, $rule ) {
       $error = 'お問合せ種別を入力してください';
       break;
 
+    case 'details':
+      $error = 'お問い合わせ内容を入力してください';
+      break;
+
     default:
       $error = '入力してください';
       break;

@@ -66,10 +66,32 @@
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.2em;
+    position: relative;
 
     @include viewport($breakpoint-desktop) {
       font-size: 14px;
       padding: 10px 0
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      height: 2px;
+      background-color: color(white);
+      width: 100%;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   }
 
@@ -79,9 +101,19 @@
     background-color: color(white);
     box-shadow: 0px 2.5px 2px 1px rgba(70, 147, 184, 0.37);
     padding: 16px 51px;
+    transition: all 300ms ease-in-out;
 
     @include viewport($breakpoint-desktop) {
       padding: 16px 20px;
+    }
+
+    &:hover {
+      color: color(white);
+      background-color: color(blue-110);
+
+      &::before {
+        display: none;
+      }
     }
   }
 
