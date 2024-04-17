@@ -1,5 +1,5 @@
 <div class="graphic-works">
-  <a class="graphic-works-link" href="" target="_blank">
+  <a class="graphic-works-link" href="<?php echo resolve_archive_url(PENGUIN_POST_TYPE);?>">
     GrApHiC WoRks 
     <span class="graphic-works-icon"></span>
   </a>

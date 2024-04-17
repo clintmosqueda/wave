@@ -49,7 +49,7 @@
       <div class="single-button">
         <?php import_part('button', array(
           'modifier' => '',
-          'link' => '',
+          'link' => WORKS_POST_TYPE == get_post_type() ? resolve_archive_url(WORKS_POST_TYPE) : resolve_archive_url(PENGUIN_POST_TYPE),
           'text' => 'all works',
         ))?>
       </div>

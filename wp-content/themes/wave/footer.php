@@ -23,9 +23,13 @@
 
   </div>
 </div> <!-- end wrap -->
-<?php wp_footer(); ?>
+<?php 
+wp_footer(); 
+$t=time();
+$versioning=date('Ymd',$t);
+?>
 
-<script src="<?php echo resolve_asset_url('/js/app.js'); ?>"></script>
+<script src="<?php echo resolve_asset_url("/js/app.js?v='$t'"); ?>"></script>
 </body>
 
 </html>

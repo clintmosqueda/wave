@@ -89,7 +89,7 @@
 
     &:hover {
       &::before {
-        transform: translateY(0);
+        transform: translateY(5px);
         opacity: 1;
       }
     }

@@ -42,7 +42,8 @@
                 if($interview_query->have_posts()) :
                   while($interview_query->have_posts()): 
                     $interview_query->the_post();
-                    $link = get_field('url')
+                    $link = get_field('url');
+                    $description = get_field('description');
               ?>
                 <div class="swiper-slide">
                   <?php import_part('card-interview', array(
@@ -50,7 +51,7 @@
                     'link' => $link,
                     'image' => get_eyecatch_data(get_the_ID(), 'card-interview', ''),
                     'title' => get_the_title(),
-                    'desc' => 'ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト',
+                    'desc' => $description,
                   )); ?>
                 </div>
                 <?php endwhile; endif; ?>
