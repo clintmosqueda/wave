@@ -4,7 +4,9 @@
     $itemsFound = $wp_query->found_posts;
 ?>
 <section class="penguin-video">
-
+  <video autoplay loop muted playsinline>
+    <source src="<?php echo resolve_asset_url('/video/wave.webm'); ?>" type="video/webm">
+  </video>
 </section>
 <section class="penguin-block">
   <div class="penguin-container">

@@ -28,7 +28,11 @@
           'text' => 'view all',
         ))?>
       </div>
-      <div class="history-video"></div>
+      <div class="history-video">
+        <video autoplay loop muted playsinline>
+          <source src="<?php echo resolve_asset_url('/video/wave.webm'); ?>" type="video/webm">
+        </video>
+      </div>
     </div>
   </div>
 </section>

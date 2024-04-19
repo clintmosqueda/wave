@@ -3299,6 +3299,12 @@ body {
     height: 320px;
   }
 }
+.history-video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .connect {
   background-image: url("../images/waves/contact-wave.svg");
@@ -4113,11 +4119,29 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
   background-image: url("../images/waves/archive-penguin.svg");
+  position: relative;
+}
+.penguin-video::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 160px;
+  content: "";
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url("../images/waves/archive-penguin.svg");
 }
 @media all and (max-width: 767px) {
   .penguin-video {
     height: 445px;
   }
+}
+.penguin-video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .penguin-block {
   background-color: #01191F;
