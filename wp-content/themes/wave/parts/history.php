@@ -21,7 +21,7 @@
         </span>
       </div>
       <div class="history-text">
-        <p class="history-desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダ</p>
+        <p class="history-desc"><?php the_field('description', 'option'); ?></p>
         <?php import_part('button', array(
           'modifier' => 'button-alt history-button',
           'link' => resolve_url('about-us'),
@@ -30,7 +30,7 @@
       </div>
       <div class="history-video">
         <video autoplay loop muted playsinline>
-          <source src="<?php echo resolve_asset_url('/video/wave.webm'); ?>" type="video/webm">
+          <source src="<?php the_field('video', 'option'); ?>" type="video/webm">
         </video>
       </div>
     </div>

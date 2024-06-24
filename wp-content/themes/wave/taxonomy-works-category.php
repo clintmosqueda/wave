@@ -22,7 +22,7 @@
         <p class="works-desc">社会と人を繋ぐ。再生回数ではなくて、誰が見てくれたのか。温かみが入ってくる。</p>
       </div>
       <div class="works-categories">
-        <a class="works-category" href="">全て</a>
+        <a class="works-category" href="<?php echo resolve_archive_url(WORKS_POST_TYPE);?>">全て</a>
         <?php foreach($works_categories as $category) : ?>
           <a class="works-category" href="<?php echo get_term_link($category->name, WORKS_POST_TYPE_CATEGORY) ?>"><?php echo $category->name; ?></a>
         <?php endforeach; ?>
