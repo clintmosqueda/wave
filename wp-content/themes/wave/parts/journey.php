@@ -14,13 +14,13 @@ $journey = get_field('journey', 'option');
         </article>
         <?php endforeach;?>
       </div>
-      <div class="journey-button">
+      <!-- <div class="journey-button">
         <?php import_part('button', array(
           'modifier' => '',
           'link' => resolve_url('about-us'),
           'text' => 'view more'
         ))?>
-      </div>
+      </div> -->
     </div>
 
   </div>

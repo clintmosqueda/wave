@@ -63,7 +63,7 @@
     z-index: -1;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(259px*0.7);
+      width: calc(259px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -77,10 +77,10 @@
     position: absolute;
     top: -118px;
     left: 39.5%;
-    margin-left: calc(-465px/2);
+    margin-left: calc(-465px / 2);
 
     @include viewport($breakpoint-laptop) {
-      width: calc(465px*0.7);
+      width: calc(465px * 0.7);
     }
 
     @include viewport($breakpoint-laptop-sm) {
@@ -89,7 +89,7 @@
     }
 
     @include viewport($breakpoint-mobile) {
-      width: calc(465px*0.5);
+      width: calc(465px * 0.5);
     }
   }
 
@@ -101,7 +101,7 @@
     z-index: -1;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(371px*0.7);
+      width: calc(371px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -116,7 +116,7 @@
     width: 273px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(273px*0.7);
+      width: calc(273px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -131,7 +131,7 @@
     left: 0;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(390px*0.7);
+      width: calc(390px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -146,7 +146,7 @@
     width: 96px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(96px*0.7);
+      width: calc(96px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -162,7 +162,7 @@
     z-index: -1;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(324px*0.7);
+      width: calc(324px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -178,7 +178,7 @@
     z-index: 1;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(406px*0.7);
+      width: calc(406px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -192,7 +192,7 @@
       right: 16.5%;
 
       @include viewport($breakpoint-laptop) {
-        width: calc(245px*0.7);
+        width: calc(245px * 0.7);
       }
 
       @include viewport($breakpoint-mobile) {
@@ -208,7 +208,7 @@
       z-index: -1;
 
       @include viewport($breakpoint-laptop) {
-        width: calc(211px*0.7);
+        width: calc(211px * 0.7);
       }
 
       @include viewport($breakpoint-mobile) {
@@ -224,7 +224,7 @@
     left: 31%;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(417px*0.7);
+      width: calc(417px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -239,7 +239,7 @@
     right: 38%;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(151px*0.7);
+      width: calc(151px * 0.7);
     }
   }
 
@@ -250,7 +250,7 @@
     width: 287px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(287px*0.7);
+      width: calc(287px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -265,7 +265,7 @@
     right: 0;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(300px*0.7);
+      width: calc(300px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -280,7 +280,7 @@
     width: 106px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(106px*0.7);
+      width: calc(106px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -294,7 +294,7 @@
       width: 60px;
 
       @include viewport($breakpoint-laptop) {
-        width: calc(60px*0.7);
+        width: calc(60px * 0.7);
       }
 
       @include viewport($breakpoint-mobile) {
@@ -310,7 +310,7 @@
     position: absolute;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(243px*0.7);
+      width: calc(243px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -319,7 +319,6 @@
   }
 
   &-trash {
-
     &-can {
       position: absolute;
       top: 43%;
@@ -327,7 +326,7 @@
       width: 97px;
 
       @include viewport($breakpoint-laptop) {
-        width: calc(97px*0.7);
+        width: calc(97px * 0.7);
       }
 
       @include viewport($breakpoint-mobile) {
@@ -343,7 +342,7 @@
       z-index: -1;
 
       @include viewport($breakpoint-laptop) {
-        width: calc(167px*0.7);
+        width: calc(167px * 0.7);
       }
 
       @include viewport($breakpoint-mobile) {
@@ -358,7 +357,7 @@
       width: 83px;
 
       @include viewport($breakpoint-laptop) {
-        width: calc(83px*0.7);
+        width: calc(83px * 0.7);
       }
 
       @include viewport($breakpoint-mobile) {
@@ -374,7 +373,7 @@
     right: 3%;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(420px*0.7);
+      width: calc(420px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -389,7 +388,7 @@
     right: -16px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(230px*0.7);
+      width: calc(230px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -404,7 +403,7 @@
     width: 182px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(182px*0.7);
+      width: calc(182px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -420,7 +419,7 @@
     scale: -1 1;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(417px*0.7);
+      width: calc(417px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -436,7 +435,7 @@
     z-index: -1;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(291px*0.7);
+      width: calc(291px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -451,7 +450,7 @@
     position: absolute;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(159px*0.7);
+      width: calc(159px * 0.7);
     }
   }
 
@@ -462,7 +461,7 @@
     width: 97px;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(97px*0.7);
+      width: calc(97px * 0.7);
     }
   }
 
@@ -473,7 +472,7 @@
     right: 30.2%;
 
     @include viewport($breakpoint-laptop) {
-      width: calc(308px*0.7);
+      width: calc(308px * 0.7);
     }
 
     @include viewport($breakpoint-mobile) {
@@ -534,10 +533,10 @@
     gap: 7px 0;
     position: absolute;
     top: 24%;
-    left: 23%;
+    left: 18%;
 
     @include viewport($breakpoint-laptop) {
-      left: 5%
+      left: 5%;
     }
 
     @include viewport($breakpoint-mobile) {
@@ -558,6 +557,7 @@
 
     @include viewport($breakpoint-mobile) {
       font-size: 28px;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -574,7 +574,7 @@
       top: 2px;
       display: block;
       object-fit: contain;
-      width: calc(115px/2);
+      width: calc(115px / 2);
     }
   }
 }

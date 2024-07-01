@@ -150,6 +150,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _review__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./review */ "./wp-content/themes/wave/src/js/review.js");
 /* harmony import */ var _pr__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pr */ "./wp-content/themes/wave/src/js/pr.js");
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./contact */ "./wp-content/themes/wave/src/js/contact.js");
+/* harmony import */ var _event__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./event */ "./wp-content/themes/wave/src/js/event.js");
 
 
 
@@ -160,13 +161,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var home = document.querySelector('.home');
-var contact = document.querySelector('.contact');
+
+var home = document.querySelector(".home");
+var contact = document.querySelector(".contact");
 if (home) {
   (0,_mv__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_journey__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_partners__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  (0,_carousel__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_review__WEBPACK_IMPORTED_MODULE_7__["default"])();
   (0,_pr__WEBPACK_IMPORTED_MODULE_8__["default"])();
 }
@@ -175,6 +176,8 @@ if (contact) {
 }
 (0,_animation__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_menu__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_carousel__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_event__WEBPACK_IMPORTED_MODULE_10__["default"])();
 
 /***/ }),
 
@@ -194,65 +197,108 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Carousel() {
-  var interviewCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-interview-carousel', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    watchSlidesProgress: true,
-    pagination: {
-      el: ".js-interview-pagination",
-      clickable: true,
-      bulletClass: 'carousel-pagination-item',
-      bulletActiveClass: 'is-active'
-    },
-    navigation: {
-      nextEl: '.carousel-navigation-next',
-      prevEl: '.carousel-navigation-prev'
-    },
-    breakpoints: {
-      769: {
-        spaceBetween: 30,
-        slidesPerView: 3,
-        allowTouchMove: false
+  var memberSlider = document.querySelector(".js-member-slider");
+  var interviewSlider = document.querySelector(".js-interview-carousel");
+  var reviewSlider = document.querySelector(".js-review-carousel");
+  var projectSlider = document.querySelector(".js-projects-carousel");
+  if (interviewSlider) {
+    var interviewCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".js-interview-carousel", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      watchSlidesProgress: true,
+      pagination: {
+        el: ".js-interview-pagination",
+        clickable: true,
+        bulletClass: "carousel-pagination-item",
+        bulletActiveClass: "is-active"
+      },
+      navigation: {
+        nextEl: ".carousel-navigation-next",
+        prevEl: ".carousel-navigation-prev"
+      },
+      breakpoints: {
+        769: {
+          spaceBetween: 30,
+          slidesPerView: 3,
+          allowTouchMove: false
+        }
       }
-    }
-  });
-  var reviewCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-review-carousel', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    watchSlidesProgress: true,
-    pagination: {
-      el: ".js-review-pagination",
-      clickable: true,
-      bulletClass: 'carousel-pagination-item',
-      bulletActiveClass: 'is-active'
-    },
-    navigation: {
-      nextEl: '.carousel-navigation-next',
-      prevEl: '.carousel-navigation-prev'
-    }
-    // breakpoints: {
-    //   769: {
-    //     spaceBetween: 40,
-    //     slidesPerView: 2,
-    //     allowTouchMove: false,
-    //   },
-    // }
-  });
-  var projectCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-projects-carousel', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    watchSlidesProgress: true,
-    pagination: {
-      el: ".js-projects-pagination",
-      clickable: true,
-      bulletClass: 'carousel-pagination-item',
-      bulletActiveClass: 'is-active'
-    },
-    navigation: {
-      nextEl: '.carousel-navigation-next',
-      prevEl: '.carousel-navigation-prev'
-    }
-  });
+    });
+  }
+  if (reviewSlider) {
+    var reviewCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".js-review-carousel", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      watchSlidesProgress: true,
+      pagination: {
+        el: ".js-review-pagination",
+        clickable: true,
+        bulletClass: "carousel-pagination-item",
+        bulletActiveClass: "is-active"
+      },
+      navigation: {
+        nextEl: ".carousel-navigation-next",
+        prevEl: ".carousel-navigation-prev"
+      }
+      // breakpoints: {
+      //   769: {
+      //     spaceBetween: 40,
+      //     slidesPerView: 2,
+      //     allowTouchMove: false,
+      //   },
+      // }
+    });
+  }
+  if (projectSlider) {
+    var projectCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".js-projects-carousel", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      watchSlidesProgress: true,
+      pagination: {
+        el: ".js-projects-pagination",
+        clickable: true,
+        bulletClass: "carousel-pagination-item",
+        bulletActiveClass: "is-active"
+      },
+      navigation: {
+        nextEl: ".carousel-navigation-next",
+        prevEl: ".carousel-navigation-prev"
+      }
+    });
+  }
+  if (memberSlider) {
+    var membersCarousel = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](memberSlider, {
+      slidesPerView: 1,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      }
+      // spaceBetween: 30,
+      // watchSlidesProgress: true,
+      // pagination: {
+      //   el: ".js-interview-pagination",
+      //   clickable: true,
+      //   bulletClass: 'carousel-pagination-item',
+      //   bulletActiveClass: 'is-active'
+      // },
+      // navigation: {
+      //   nextEl: '.carousel-navigation-next',
+      //   prevEl: '.carousel-navigation-prev',
+      // },
+      // breakpoints: {
+      //   769: {
+      //     spaceBetween: 30,
+      //     slidesPerView: 3,
+      //     allowTouchMove: false,
+      //   },
+      // }
+    });
+  }
 }
 
 /***/ }),
@@ -299,6 +345,41 @@ function Contact() {
     label.classList.toggle('is-checked');
     confirmButton.classList.toggle('is-checked');
   });
+}
+
+/***/ }),
+
+/***/ "./wp-content/themes/wave/src/js/event.js":
+/*!************************************************!*\
+  !*** ./wp-content/themes/wave/src/js/event.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Event)
+/* harmony export */ });
+function Event() {
+  var event = document.querySelector(".event");
+  var cards = document.querySelectorAll(".event-card");
+  var years = document.querySelectorAll(".event-timeline-year");
+  if (event) {
+    cards[0].classList.add("is-visible");
+    years[0].classList.add("is-active");
+    years.forEach(function (el, i) {
+      el.addEventListener("click", function () {
+        cards.forEach(function (el) {
+          el.classList.remove("is-visible");
+        });
+        years.forEach(function (el) {
+          el.classList.remove("is-active");
+        });
+        el.classList.add("is-active");
+        cards[i].classList.add("is-visible");
+      });
+    });
+  }
 }
 
 /***/ }),

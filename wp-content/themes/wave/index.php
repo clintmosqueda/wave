@@ -11,12 +11,13 @@
 get_header(); ?>
 <?php import_part('mv');?>
 <?php import_part('journey');?>
+<?php import_part('about-us');?>
 <?php import_part('partners');?>
 <?php import_part('projects');?>
 <?php import_part('review');?>
 <?php import_part('interview');?>
 <?php import_part('pr');?>
-<?php import_part('history');?>
+
 <?php
 get_footer();
 

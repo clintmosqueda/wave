@@ -2,6 +2,7 @@
   background-color: #00566f;
   position: relative;
   z-index: 1;
+  margin-bottom: -100px;
 
   &-container {
     position: relative;
@@ -25,7 +26,7 @@
     width: 333px;
 
     @include viewport($breakpoint-laptop-sm) {
-      width: calc(333px*0.7);
+      width: calc(333px * 0.7);
       right: 13.3%;
     }
 
@@ -40,9 +41,9 @@
     width: 158px;
 
     @include viewport($breakpoint-laptop-sm) {
-      width: calc(158px*0.7);
+      width: calc(158px * 0.7);
       right: 3.2%;
-      top: 0
+      top: 0;
     }
   }
 
@@ -52,9 +53,9 @@
     width: 146px;
 
     @include viewport($breakpoint-laptop-sm) {
-      width: calc(146px*0.7);
+      width: calc(146px * 0.7);
       right: 6.7%;
-      top: 14.2%
+      top: 14.2%;
     }
   }
 
@@ -73,8 +74,8 @@
       height: 484px;
 
       @include viewport($breakpoint-laptop-sm) {
-        width: calc(484px*0.7);
-        height: calc(484px*0.7);
+        width: calc(484px * 0.7);
+        height: calc(484px * 0.7);
       }
     }
   }
@@ -92,7 +93,7 @@
   }
 
   &-content {
-    min-height: 1095px;
+    min-height: 1000px;
     padding: 248px 80px 0;
 
     @include viewport($breakpoint-laptop) {
@@ -124,7 +125,7 @@
       flex-shrink: 0;
       width: 79px;
       height: 20px;
-      background-image: url('#{$image-path}/squiggly.png');
+      background-image: url("#{$image-path}/squiggly.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -220,7 +221,7 @@
     }
 
     &:not(:last-of-type) {
-      border-bottom: 1px solid #A0B8C1;
+      border-bottom: 1px solid #a0b8c1;
     }
   }
 
@@ -267,15 +268,15 @@
       color: color(white);
 
       // &::before {
-        
+
       // }
     }
 
     &::before {
-      content: '';
+      content: "";
       width: 48px;
       height: 48px;
-      background-image: url('#{$image-path}/arrow.png');
+      background-image: url("#{$image-path}/arrow.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

@@ -19,10 +19,11 @@
   }
 
   &-about {
-    background-color: #0B7EAE;
+    background-color: #0b7eae;
     color: color(white);
     width: 100%;
     padding: 169px 0 179px 130px;
+    max-width: 653px;
 
     @include viewport($breakpoint-laptop) {
       padding-left: 50px;
@@ -67,11 +68,11 @@
     flex-shrink: 0;
 
     @include viewport($breakpoint-laptop) {
-      max-width: calc(590px*0.8);
+      max-width: calc(590px * 0.8);
     }
 
     @include viewport($breakpoint-laptop-sm) {
-      max-width: calc(590px*0.6);
+      max-width: calc(590px * 0.6);
     }
   }
 }

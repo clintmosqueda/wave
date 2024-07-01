@@ -1,5 +1,5 @@
 .connect {
-  background-image: url('#{$image-path}/waves/contact-wave.svg');
+  background-image: url("#{$image-path}/waves/contact-wave.svg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,6 +37,7 @@
     @include viewport($breakpoint-mobile) {
       width: 192px;
       top: -25px;
+      display: none;
     }
   }
 
@@ -45,7 +46,6 @@
     position: absolute;
     top: -38px;
     left: 353px;
-
 
     @include viewport($breakpoint-laptop) {
       width: 122px;
@@ -150,7 +150,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: -10px;
@@ -183,7 +183,7 @@
       }
 
       &::before {
-        content: '';
+        content: "";
         flex-shrink: 0;
         display: block;
         height: 12px;
@@ -191,7 +191,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('#{$image-path}/arrow-white-thin.png');
+        background-image: url("#{$image-path}/arrow-white-thin.png");
       }
     }
   }

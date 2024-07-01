@@ -1,10 +1,10 @@
 
   <?php 
-    if(!is_front_page()) {
+    if(!is_page('about-us')) {
       import_part('connect');
     }
   ?>
-  <div class="footer <?php echo is_front_page() ? 'is-top' : '' ?>">
+  <div class="footer <?php echo is_page('about-us') ? 'is-top' : '' ?>">
     <div class="footer-content">
       <a class="footer-logo" href="<?php echo resolve_url(); ?>" ><img src="<?php echo resolve_asset_url('/images/logo-footer.png'); ?>" alt=""></a>
 

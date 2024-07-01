@@ -59,11 +59,11 @@
     display: flex;
     gap: 0 20px;
     align-items: center;
-    margin-top: 48px;
+    margin-top: 25px;
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 4px;
       right: 25px;
@@ -72,20 +72,20 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('#{$image-path}/squiggly-alt.png');
+      background-image: url("#{$image-path}/squiggly-alt.png");
     }
   }
 
   &-avatar {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
 
     @include viewport($breakpoint-mobile) {
-      height: calc(56px*0.8);
-      width: calc(56px*0.8);
+      height: calc(56px * 0.8);
+      width: calc(56px * 0.8);
     }
 
     img {

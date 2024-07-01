@@ -1,6 +1,6 @@
 <?php 
 /*
-* Template name: Contact
+* Template name: Confirm
 */
 get_header(); ?>
 <?php import_part('page-heading', array(

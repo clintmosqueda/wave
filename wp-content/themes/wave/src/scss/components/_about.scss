@@ -1,8 +1,11 @@
 .about {
   // background-color: color(blue-20);
   // background-color: #F1F1F1;
-  background: linear-gradient(180deg, rgba(241, 241, 241, 1) 41%, rgba(0, 86, 111, 0) 87%);
-  ;
+  background: linear-gradient(
+    180deg,
+    rgba(241, 241, 241, 1) 41%,
+    rgba(0, 86, 111, 0) 87%
+  );
   position: relative;
   z-index: 1;
 
@@ -17,7 +20,6 @@
   }
 
   &-sun {
-
     &-container {
       position: absolute;
       left: 50%;
@@ -25,7 +27,7 @@
       // transform: translateX(-50%);
       width: 709px;
       height: 709px;
-      margin-left: calc(-709px/2)
+      margin-left: calc(-709px / 2);
     }
 
     width: 100%;
@@ -48,7 +50,7 @@
     height: 100%;
     background-position: center top 0;
     background-repeat: no-repeat;
-    background-image: url('#{$image-path}/waves/about-wave.svg');
+    background-image: url("#{$image-path}/waves/about-wave.svg");
     background-size: 100% auto;
   }
 
@@ -133,7 +135,7 @@
     width: 365px;
     position: absolute;
     bottom: 11px;
-    right: 118px
+    right: 118px;
   }
 
   &-sardines {
@@ -176,12 +178,89 @@
   width: 100%;
 
   &-parallax {
-    &>use {
-      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite
+    & > use {
+      animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
     }
 
     // & > use:nth-child(1) {
 
     // }
+  }
+}
+
+.about-us {
+  position: relative;
+  margin-top: -275px;
+  z-index: 1;
+
+  &-waves {
+    position: absolute;
+    width: 1950px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-inner {
+    color: color(blue-30);
+    text-align: center;
+    padding-top: 200px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-top: 130px;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-family: $font-lemon;
+      @include viewport($breakpoint-mobile) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      white-space: pre-line;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 0.3em;
+      line-height: 2.14;
+      margin-top: 86px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &-button {
+    color: color(blue-110);
+    border-radius: 20px;
+    background-color: color(white);
+    box-shadow: 0px 4px 3px rgba(color(blue-60), 0.5);
+    padding: 14px 40px;
+    font-size: 18px;
+    font-family: $font-lemon;
+    color: color(blue-60);
+    display: inline-block;
+    margin-top: 40px;
+    transition: all 300ms ease-in-out;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: color(blue-60);
+      color: color(white);
+    }
   }
 }

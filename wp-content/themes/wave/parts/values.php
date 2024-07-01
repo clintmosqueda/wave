@@ -1,3 +1,7 @@
+<?php
+$values = get_field('values');
+?>
+
 <section class="values animate-in fade-in">
   <div class="values-block">
     <div class="values-graphic">
@@ -12,16 +16,6 @@
     </div>
   </div>
   <div class="values-content">
-    <p class="values-desc">どこまでも行こう
-    目の前に広がる、果てしなく広く大きな海。
-    向こう岸は見えないけれど、
-    その先にきっと待っている人がいる。
-    だから、波に乗る。でも、その前に。</p>
-    <p class="values-desc">きらきらと日の光を反射する水面よりも、
-    もっと奥深くにあるものを見つけたい。
-    まだ誰の目も、声も届いていない、奥の奥にある大きな流れを探る。
-    流れのみなもとが掴めたら、絶えず押し寄せる波も、もう怖くない。
-    流れに身を委ねて、一緒に進もう。
-    どこまで行ける？どこまでも行こう。</p>
+    <p class="values-desc"><?php echo $values; ?></p>
   </div>
 </section>

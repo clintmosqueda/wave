@@ -10,6 +10,11 @@
       'hide_empty' => false,
     );
     $works_categories = get_categories($args);
+
+    $terms = get_terms( array(
+      'taxonomy'   => WORKS_POST_TYPE_TAG,
+      'hide_empty' => false,
+  ) );
 ?>
 <section class="works">
   <div class="works-wrapper">
@@ -19,7 +24,11 @@
 
       <div class="works-mid">
         <h3 class="works-mid-heading">all works</h3>
-        <p class="works-desc">社会と人を繋ぐ。再生回数ではなくて、誰が見てくれたのか。温かみが入ってくる。</p>
+        <div class="works-mid-tags">
+          <?php foreach($terms as $term):?>
+          <span class="works-mid-tag"><?php echo $term->name;?></span>
+          <?php endforeach;?>
+        </div>
       </div>
       <div class="works-categories">
         <a class="works-category" href="<?php echo resolve_archive_url(WORKS_POST_TYPE);?>">全て</a>

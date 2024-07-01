@@ -2,7 +2,7 @@
   background-color: color(white);
   background-position: center top;
   background-repeat: no-repeat;
-  background-image: url('#{$image-path}/waves/works-wave.svg');
+  background-image: url("#{$image-path}/waves/works-wave.svg");
   background-size: auto;
   margin-top: -49px;
 
@@ -17,11 +17,17 @@
     min-height: 1480px;
     padding-bottom: 142px;
     padding-top: 202px;
+
+    .graphic-works {
+      @include viewport($breakpoint-mobile) {
+        padding: 0;
+      }
+    }
   }
 
   &-mid {
     text-align: center;
-    margin-top: 233px;
+    margin-top: 150px;
 
     @include viewport($breakpoint-mobile) {
       margin-top: 100px;
@@ -32,6 +38,24 @@
       font-family: $font-lemon;
       font-size: 30px;
     }
+
+    &-tags {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 66px;
+    }
+    &-tag {
+      color: color(white);
+      background-color: color(blue-60);
+      display: inline-block;
+      border-radius: 50px;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
 
   &-desc {
@@ -41,11 +65,9 @@
     letter-spacing: 0.15em;
     margin-top: 66px;
 
-
     @include viewport($breakpoint-laptop-sm) {
       line-height: 150%;
     }
-
   }
 
   &-categories {
@@ -72,16 +94,16 @@
     letter-spacing: 0.15em;
     transition: opacity 300ms ease-in-out;
 
-    &:nth-of-type(3n+1) {
+    &:nth-of-type(3n + 1) {
       background-color: color(white);
-      color: color(blue-30)
+      color: color(blue-30);
     }
 
-    &:nth-of-type(3n+2) {
+    &:nth-of-type(3n + 2) {
       background-color: color(blue-60);
     }
 
-    &:nth-of-type(3n+3) {
+    &:nth-of-type(3n + 3) {
       background-color: color(orage);
     }
 
@@ -121,7 +143,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 94px;
+    padding-bottom: 150px;
     margin-bottom: -269px;
 
     @include viewport($breakpoint-mobile) {
@@ -140,7 +162,7 @@
       background-position: center top;
       background-repeat: no-repeat;
       background-size: 100%;
-      background-image: url('#{$image-path}/waves/graphic-works-wave.svg');
+      background-image: url("#{$image-path}/waves/graphic-works-wave.svg");
     }
   }
 }

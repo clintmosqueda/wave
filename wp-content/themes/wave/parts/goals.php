@@ -15,11 +15,11 @@
       設立 2021年9月30日
       資本金 300万</p>
     </div>
-    <div class="goals-figure">
+    <!-- <div class="goals-figure">
       <?php import_part('image', array(
         'modifier' => 'goals-development',
         'src' => '/images/development-goals.jpg'
       ))?>
-    </div>
+    </div> -->
   </div>
 </div>

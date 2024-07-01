@@ -1,6 +1,6 @@
 .graphic-works {
   color: color(white);
-  max-width: 527px;
+  max-width: 597px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid #C8EFF4;
+    border-bottom: 2px solid #c8eff4;
     padding-bottom: 9px;
     gap: 0 19px;
 
@@ -21,7 +21,7 @@
 
     &::before {
       position: relative;
-      content: '';
+      content: "";
       top: -8px;
       width: 55px;
       height: 83px;
@@ -29,7 +29,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('#{$image-path}/graphic-works.png');
+      background-image: url("#{$image-path}/graphic-works.png");
 
       @include viewport($breakpoint-mobile) {
         width: 44px;
@@ -54,7 +54,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       width: 18px;
       height: 12px;
       position: absolute;
@@ -64,7 +64,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('#{$image-path}/arrow-white-thin.png');
+      background-image: url("#{$image-path}/arrow-white-thin.png");
     }
   }
 
@@ -72,6 +72,8 @@
     font-size: 16px;
     letter-spacing: 0.125em;
     margin-top: 35px;
+    white-space: pre-line;
+    line-height: 1.56;
 
     @include viewport($breakpoint-mobile) {
       font-size: 14px;

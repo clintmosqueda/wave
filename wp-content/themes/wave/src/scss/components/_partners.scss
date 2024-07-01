@@ -1,7 +1,7 @@
 .partners {
   position: relative;
   z-index: 1;
-  margin-top: -275px;
+  // margin-top: -275px;
 
   &-waves {
     position: absolute;
@@ -38,6 +38,10 @@
     @include viewport($breakpoint-desktop) {
       padding: 226px 0 0;
     }
+
+    @include viewport($breakpoint-mobile) {
+      padding: 120px 0 0;
+    }
   }
 
   &-label {
@@ -58,14 +62,14 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
       width: 71px;
       height: 54px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('#{$image-path}/creatures/penguin-tripad.svg');
+      background-image: url("#{$image-path}/creatures/penguin-tripad.svg");
 
       @include viewport($breakpoint-mobile) {
         display: none;
@@ -76,23 +80,20 @@
   &-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 56px 0;
+    gap: 56px 32px;
     margin-top: 90px;
 
     @include viewport($breakpoint-desktop) {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @include viewport($breakpoint-laptop-sm) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
     @include viewport($breakpoint-mobile) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     @include viewport($breakpoint-mobile-l) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -103,6 +104,10 @@
   }
 
   &-figure {
+    width: 100%;
+    @include viewport($breakpoint-mobile) {
+      padding: 0 15px;
+    }
     img {
       display: block;
       width: 100%;

@@ -1,11 +1,15 @@
 .member {
-  background-image: url('#{$image-path}/waves/member-wave.svg');
+  background-image: url("#{$image-path}/waves/member-wave.svg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: auto;
   margin-top: -207px;
   position: relative;
   z-index: 2;
+
+  &-top {
+    position: relative;
+  }
 
   &-content {
     padding-top: 250px;
@@ -49,8 +53,8 @@
 
   &-bottle {
     position: absolute;
-    top: -166px;
-    left: 38px;
+    top: -57px;
+    left: 149px;
     width: 115px;
     height: 106px;
 
@@ -143,7 +147,7 @@
   &-name {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #C8EFF4;
+    border-bottom: 1px solid #c8eff4;
     gap: 23px 0;
     padding-bottom: 19px;
     padding-left: 22px;
@@ -176,7 +180,7 @@
       position: absolute;
       top: 7px;
       left: -8px;
-      content: '';
+      content: "";
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -210,5 +214,9 @@
     @include viewport($breakpoint-mobile) {
       font-size: 14px;
     }
+  }
+
+  &-slider {
+    overflow: visible !important;
   }
 }
