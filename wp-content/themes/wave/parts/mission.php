@@ -24,6 +24,7 @@ $services = get_field('services');
 <section class="mission">
   <div class="mission-wave"></div>
   <div class="mission-wrapper">
+    <?php import_part('values')?>
     <div class="mission-content">
       <h3 class="mission-heading animate-in fade-in">Services <span>事業内容</span></h3>
       <div class="mission-cards">
@@ -49,6 +50,6 @@ $services = get_field('services');
         <?php endforeach; ?>
       </div>
     </div>
-    <?php import_part('values')?>
+    
   </div>
 </section>

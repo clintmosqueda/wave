@@ -4687,7 +4687,7 @@ body {
   margin: 0 auto;
 }
 .mission-content {
-  padding: 392px 0 186px;
+  padding: 0 0 186px;
 }
 .mission-heading {
   font-size: 30px;
@@ -4979,16 +4979,17 @@ body {
   display: flex;
   justify-content: center;
   padding-right: 34px;
+  padding: 392px 34px 186px 0;
 }
 @media all and (max-width: 1420px) {
   .values {
-    padding: 0 30px;
+    padding: 392px 30px 186px;
   }
 }
 @media all and (max-width: 767px) {
   .values {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 392px 20px 186px;
   }
 }
 .values-block {
